@@ -1,2 +1,12 @@
-
-
+header {
+  display: flex;
+  border-bottom: 1px solid black;
+  height: 50px;
+}
+header nav ul {
+  display: flex;
+  padding: 0 10px;
+}
+header nav ul li {
+  padding-left: 15px;
+}
