@@ -10,3 +10,12 @@ header nav ul {
 header nav ul li {
   padding-left: 15px;
 }
+.list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.list .card {
+  border: 1px solid black;
+  display: flex;
+  width: 342px;
+}
