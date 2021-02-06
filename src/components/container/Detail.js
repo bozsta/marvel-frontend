@@ -12,9 +12,7 @@ const Detail = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.post(`${process.env.REACT_APP_API_URL}/comics/char/${id}`)
-        // console.log('data', response.data)
-        // setData(response.data)
+        const response = await axios.get(`${process.env.REACT_APP_API_URL}/comics/char/${id}`)
         setPersoImage(`${response.data.thumbnail.path}/portrait_xlarge.jpg`)
         setCommics(response.data.comics)
         setIsloading(false)
