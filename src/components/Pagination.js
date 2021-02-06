@@ -1,4 +1,3 @@
-import ReactPaginate from 'react-paginate'
 
 const Pagination = ({ max, setMax, page, setPage, pageMax }) => {
   const handlePev = () => {
