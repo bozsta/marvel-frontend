@@ -1,3 +1,4 @@
+import ReactPaginate from 'react-paginate'
 
 const Pagination = ({ max, setMax, page, setPage, pageMax }) => {
   const handlePev = () => {
@@ -12,15 +13,21 @@ const Pagination = ({ max, setMax, page, setPage, pageMax }) => {
   }
   return (
     <div className='pagination'>
-      <span onClick={handlePev}>Prev</span>
-      <div>{`Page ${page} sur ${pageMax}`}</div>
-      <select value={max} onChange={setMax}>
-        <option>10</option>
-        <option>20</option>
-        <option>50</option>
-        <option>100</option>
-      </select>
-      <span onClick={handleNext}>Next</span>
+      <div className='navigation'>
+        <button onClick={handlePev}>Prev</button>
+        <div>{`Page ${page} sur ${pageMax}`}</div>
+        <button onClick={handleNext}>Next</button>
+      </div>
+      <div className='itemPerPage'>
+        <span>carte par page:</span>
+        <select value={max} onChange={setMax}>
+          <option>10</option>
+          <option>20</option>
+          <option>50</option>
+          <option>100</option>
+        </select>
+      </div>
+
     </div>
   )
 }

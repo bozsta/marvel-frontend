@@ -16,7 +16,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 library.add(faStar)
 
-function App () {
+function App() {
   const [search, setSearch] = useState('')
   const handleSearch = (e) => {
     const { value } = e.target
@@ -25,26 +25,28 @@ function App () {
 
   return (
     <div className='App'>
-      <Router>
-        <Header searchVal={search} handleSearch={handleSearch} />
-        <Switch>
-          <Route path='/personnages'>
-            <Personnages search={search} />
-          </Route>
-          <Route path='/comics'>
-            <Comics search={search} />
-          </Route>
-          <Route path='/favoris'>
-            <Favoris />
-          </Route>
-          <Route path='/detail'>
-            <Detail />
-          </Route>
-          <Route path='*'>
-            <Redirect to='/personnages' />
-          </Route>
-        </Switch>
-      </Router>
+      <div className='container'>
+        <Router>
+          <Header searchVal={search} handleSearch={handleSearch} />
+          <Switch>
+            <Route path='/personnages'>
+              <Personnages search={search} />
+            </Route>
+            <Route path='/comics'>
+              <Comics search={search} />
+            </Route>
+            <Route path='/favoris'>
+              <Favoris />
+            </Route>
+            <Route path='/detail'>
+              <Detail />
+            </Route>
+            <Route path='*'>
+              <Redirect to='/personnages' />
+            </Route>
+          </Switch>
+        </Router>
+      </div>
     </div>
   )
 }

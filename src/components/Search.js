@@ -1,6 +1,6 @@
 const Search = ({ search, handleSearch }) => {
   return (
-    <div>
+    <div className='search'>
       <input type='text' value={search} onChange={handleSearch} />
     </div>
   )
