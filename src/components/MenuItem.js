@@ -1,9 +1,9 @@
-import { useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 const MenuItems = ({ title, to }) => {
-  const history = useHistory();
-  const handleClick = (e) => {
-    history.push(`${to}`);
-  };
-  return <li onClick={handleClick}>{title}</li>;
+  return (
+    <li>
+      <Link to={to}>{title}</Link>
+    </li>
+  );
 };
 export default MenuItems;

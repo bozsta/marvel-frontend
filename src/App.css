@@ -20,6 +20,9 @@ header {
   color: white;
   padding: 0 15px;
 }
+header .main-logo {
+  display: contents;
+}
 header nav {
   display: flex;
   flex-grow: 1;
@@ -30,7 +33,16 @@ header nav ul {
   align-items: center;
 }
 header nav ul li {
-  padding-left: 15px;
+  border-right: 1px solid white;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: White;
+  text-transform: uppercase;
+  padding: 19px;
+}
+header nav ul li a:hover {
+  color: #c60404;
 }
 .container {
   max-width: 1200px;
