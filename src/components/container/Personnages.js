@@ -3,7 +3,8 @@ import axios from 'axios'
 import ListCard from '../ListCard'
 import Pagination from '../Pagination'
 
-const Personnages = () => {
+const Personnages = ({ search }) => {
+  console.log('search', search)
   const [isLoading, setIsloading] = useState(true)
   const [data, setData] = useState([])
   const [limit, setLimit] = useState(10)
@@ -12,7 +13,8 @@ const Personnages = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios.get(`${process.env.REACT_APP_API_URL}/characteres/all?limit=${limit}&page=${page}`)
+      console.log('search', search)
+      const response = await axios.get(`${process.env.REACT_APP_API_URL}/characteres/all?limit=${limit}&page=${page}&name=${search}`)
       console.log('response', response.data)
       setData(response.data.results)
       setLimit(response.data.limit)
@@ -20,7 +22,7 @@ const Personnages = () => {
       setIsloading(false)
     }
     fetchData()
-  }, [limit, page])
+  }, [limit, page, search])
 
   const handleSetMax = (e) => {
     const { value } = e.target
@@ -30,13 +32,8 @@ const Personnages = () => {
   return (
     <>
       {isLoading && <div> Loading ...</div>}
-      {/* !isLoading && <div className='list'>
-        {data.map(item => {
-          return <Card key={item._id} perso={item} />
-        })}
-      </div> */}
-      {!isLoading && <ListCard data={data} />}
-      {!isLoading && <Pagination max={limit} setMax={handleSetMax} page={page} setPage={setPage} pageMax={pageMax}/>}
+      {!isLoading && <ListCard data={data} isChar={true} />}
+      {!isLoading && <Pagination max={limit} setMax={handleSetMax} page={page} setPage={setPage} pageMax={pageMax} />}
     </>
   )
 }
