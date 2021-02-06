@@ -1,6 +1,6 @@
 html, body,
 #root, .App {
-  height: 100%;
+  min-height: 100%;
 }
 .App {
   background: url('./assets/images/background/marvelcomics.jpg');
