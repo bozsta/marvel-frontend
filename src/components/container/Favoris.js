@@ -21,9 +21,26 @@ const Favoris = () => {
     }
     fetchData()
   }, [favoris])
+  const handleFavorisClick = (id, e) => {
+    e.stopPropagation()
+    const lsValue = JSON.parse(window.localStorage.getItem('myfavoriteMarvel'))
+    let newLsValue = []
+    let index = -1
+    if (lsValue) {
+      index = lsValue.indexOf(id)
+    }
+    if (index !== -1) {
+      lsValue.splice(index, 1)
+      newLsValue = [...lsValue]
+    } else {
+      newLsValue = lsValue ? [...lsValue, id] : [id]
+    }
+    window.localStorage.setItem('myfavoriteMarvel', JSON.stringify(newLsValue))
+    setFavoris(newLsValue)
+  }
   return (
     <>
-      <ListCard data={data} />
+      <ListCard data={data} handleFavorisClick={handleFavorisClick} favorisEnable='true' favoris={favoris} />
     </>
   )
 }

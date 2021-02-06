@@ -3,7 +3,7 @@ import axios from 'axios'
 import ListCard from '../ListCard'
 import Pagination from '../Pagination'
 
-const Comics = () => {
+const Comics = ({ search }) => {
   const [isLoading, setIsloading] = useState(true)
   const [data, setData] = useState([])
   const [limit, setLimit] = useState(10)
@@ -11,18 +11,19 @@ const Comics = () => {
   const [pageMax, setPageMax] = useState(null)
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios.get(`${process.env.REACT_APP_API_URL}/comics/all?limit=${limit}&page=${page}`)
+      const response = await axios.get(`${process.env.REACT_APP_API_URL}/comics/all?limit=${limit}&page=${page}&title=${search}`)
       setData(response.data.results)
       setLimit(response.data.limit)
       setPageMax(Math.ceil(response.data.count / response.data.limit))
       setIsloading(false)
     }
     fetchData()
-  }, [limit, page])
+  }, [limit, page, search])
   const handleSetMax = (e) => {
     const { value } = e.target
     setLimit(value)
   }
+
   return (
     <>
       {isLoading && <div> Loading ...</div>}

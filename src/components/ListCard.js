@@ -1,10 +1,11 @@
 import Card from './Card'
 
-const ListCard = ({ data, isChar }) => {
+const ListCard = ({ data, isChar, handleFavorisClick, favorisEnable, favoris }) => {
   return (
     <div className='list'>
       {data.map(item => {
-        return <Card key={item._id} item={item} id={item._id} isChar={isChar} />
+        const isFavoris = favoris.indexOf(item._id) !== -1
+        return <Card key={item._id} item={item} id={item._id} isChar={isChar} handleFavorisClick={handleFavorisClick} favorisEnable={favorisEnable} isFavoris={isFavoris} />
       })}
     </div>
   )

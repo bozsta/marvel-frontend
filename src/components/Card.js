@@ -1,39 +1,36 @@
 import { useHistory } from 'react-router-dom'
+import AddFavoris from './AddFavoris'
 
-const Card = ({ item, isChar, id }) => {
+const Card = ({ item, isChar, id, handleFavorisClick, favorisEnable, isFavoris }) => {
   const history = useHistory()
   const handleClick = () => {
     if (isChar) {
       history.push('/detail', { id: id })
     }
   }
-  const handleFavorisClick = (e) => {
-    e.stopPropagation()
-    const lsValue = JSON.parse(window.localStorage.getItem('myfavoriteMarvel'))
-    let newLsValue = []
-    let index = -1
-    if (lsValue) {
-      index = lsValue.indexOf(id)
-    }
-    if (index !== -1) {
-      lsValue.splice(index, 1)
-      newLsValue = [...lsValue]
-    } else {
-      newLsValue = lsValue ? [...lsValue, id] : [id]
-    }
-    window.localStorage.setItem('myfavoriteMarvel', JSON.stringify(newLsValue))
+  const handleFavoris = (e) => {
+    handleFavorisClick(id, e)
   }
   return (
-    <div className='card' onClick={handleClick}>
-      <div className='image'>
-        {<img src={`${item.thumbnail.path}/portrait_xlarge.jpg`} alt={item.name} />}
+    <div className='card flip-card' onClick={handleClick}>
+      <div className='flip-card-inner'>
+        <div className='flip-card-front'>
+          <div className='image'>
+            {item.thumbnail && <img src={`${item.thumbnail.path}/portrait_xlarge.jpg`} alt={item.name} />}
+          </div>
+        </div>
+        <div className='flip-card-back'>
+          <div className='content'>
+            <p>{item.name}</p>
+            <p>{item.title}</p>
+            <p>{item.description}</p>
+          </div>
+        </div>
       </div>
-      <div className='content'>
-        <p>{item.name}</p>
-        <p>{item.title}</p>
-        <p>{item.description}</p>
-      </div>
-      <div onClick={handleFavorisClick}>add favoris</div>
+
+      <AddFavoris favorisEnable={favorisEnable} handleFavoris={handleFavoris} isFavoris={isFavoris} />
+
+      {/* favorisEnable && <div onClick={handleFavoris}>add favoris</div> */}
     </div>
   )
 }

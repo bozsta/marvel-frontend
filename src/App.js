@@ -1,3 +1,5 @@
+import './Reset.css'
+import './App.css'
 import {
   BrowserRouter as Router,
   Switch,
@@ -10,8 +12,9 @@ import Personnages from './components/container/Personnages'
 import Comics from './components/container/Comics'
 import Favoris from './components/container/Favoris'
 import Detail from './components/container/Detail'
-import './Reset.css'
-import './App.css'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faStar } from '@fortawesome/free-solid-svg-icons'
+library.add(faStar)
 
 function App () {
   const [search, setSearch] = useState('')
@@ -19,6 +22,7 @@ function App () {
     const { value } = e.target
     setSearch(value)
   }
+
   return (
     <div className='App'>
       <Router>
