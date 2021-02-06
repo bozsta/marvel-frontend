@@ -7,6 +7,9 @@ const Card = ({ item, isChar, id }) => {
       history.push('/detail', { id: id })
     }
   }
+  const handleFavorisAdd = (id) => {
+    window.localStorage.setItem('myValueInLocalStorage', id)
+  }
   return (
     <div className='card' onClick={handleClick}>
       <div className='image'>
@@ -17,6 +20,7 @@ const Card = ({ item, isChar, id }) => {
         <p>{item.title}</p>
         <p>{item.description}</p>
       </div>
+      <div onClick={handleFavorisAdd}>add favoris</div>
     </div>
   )
 }

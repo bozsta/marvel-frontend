@@ -28,7 +28,7 @@ const Personnages = ({ search }) => {
     const { value } = e.target
     setLimit(value)
   }
-
+  
   return (
     <>
       {isLoading && <div> Loading ...</div>}

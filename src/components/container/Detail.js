@@ -23,7 +23,7 @@ const Detail = () => {
       }
     }
     fetchData()
-  }, [])
+  }, [id])
 
   return (
     <div>
