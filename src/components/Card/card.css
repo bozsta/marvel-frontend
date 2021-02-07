@@ -43,10 +43,15 @@
 .card .flip-card-front .image {
   height: 100%;
 }
+.card .flip-card-front .title {
+  font-family: "Marvel", sans-serif;
+  font-weight: bold;
+}
 .card .flip-card-back {
   background-color: #266ef6;
   color: white;
   transform: rotateY(180deg);
+  font-family: "Marvel", sans-serif;
 }
 .card .flip-card-back .content {
   margin: 0 auto;

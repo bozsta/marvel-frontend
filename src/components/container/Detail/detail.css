@@ -1,51 +1,124 @@
 .fiche-detail {
   background-color: #fff;
   padding: 15px;
+  font-family: "Kufam", cursive;
+}
+.fiche-detail span.red {
+  color: #b12e32;
 }
 .fiche-detail .header {
   color: white;
+  text-transform: uppercase;
+}
+.fiche-detail .typewriter {
+  font-family: "Special Elite", cursive;
 }
 .fiche-detail .header .top-pane {
   display: flex;
   justify-content: space-between;
-  padding: 20px 20px 0px 5px;
+  padding: 20px 20px 0px 15px;
   background-color: black;
+}
+.fiche-detail .header .top-pane .civility {
+  flex-grow: 1;
 }
 .fiche-detail .header .top-pane .name {
   display: flex;
   border-bottom: 1px solid white;
+  margin-bottom: 20px;
+}
+.fiche-detail .header .top-pane .name .label {
+  font-weight: 700;
+  font-size: 25px;
+}
+.fiche-detail .header .top-pane .name p {
+  align-self: center;
+  padding-left: 8px;
+}
+.fiche-detail .header .top-pane .status p {
+  align-self: center;
+  padding-left: 8px;
 }
 .fiche-detail .header .top-pane .status {
+  display: flex;
   border-bottom: 1px solid white;
+  font-weight: 800;
+}
+.fiche-detail .header .top-pane .status label {
+  font-weight: 800;
+}
+.fiche-detail .header .top-pane .left-side {
+  text-align: center;
+  padding-top: 15px;
+  padding-right: 15px;
+}
+.fiche-detail .header .top-pane .logo {
+  text-align: center;
+  flex-grow: 1;
+}
+.fiche-detail .header .top-pane .logo img {
+  object-fit: none;
+  width: 155px;
 }
 .fiche-detail .header .middle-pane {
   background-color: black;
-  padding: 0 5px 5px 5px;
+  padding: 0 5px 5px 15px;
+  font-weight: 900;
+  font-size: 30px;
 }
 .fiche-detail .header .bottom-pane {
   display: flex;
   justify-content: space-between;
-  margin-top: 10px;
+  margin-top: 5px;
+  font-size: 20px;
 }
 .fiche-detail .header .bottom-pane > div {
   background-color: black;
-  padding: 5px;
+  padding: 7px 5px 3px 5px;
 }
 .fiche-detail .header .bottom-pane > div:first-child {
-  flex-grow: 1;
+  flex-grow: 2;
   margin-right: 5px;
 }
+.fiche-detail .header .bottom-pane > div.codebarre {
+  flex-grow: 1;
+}
+.fiche-detail .header .investigation {
+  font-size: 30px;
+  font-weight: 600;
+  padding-bottom: 10px;
+}
+.fiche-detail .header .type {
+  font-size: 20px;
+  padding-bottom: 15px;
+}
+.fiche-detail .header .consign {
+  font-size: 12px;
+  text-align: center;
+}
 .fiche-detail .content-container {
-  padding: 20px 0;
+  padding: 30px 0;
 }
 .fiche-detail .content-container .content {
   display: flex;
   justify-content: space-between;
+  padding: 0 30px;
+}
+.fiche-detail .content-container .content .description {
+  font-family: "Special Elite", cursive;
+  line-height: 25px;
+  padding-right: 40px;
 }
 .fiche-detail .content-container .content .image {
   border: 5px solid black;
+  display: flex;
+  background: black;
 }
-
+.fiche-detail .content-container .content .image img {
+  width: 200px;
+  border: none;
+  height: 284px;
+}
 .fiche-detail .perso {
   display: flex;
   justify-content: center;
@@ -54,6 +127,11 @@
 .fiche-detail .perso img {
   border: 3px solid #fff;
 }
+.fiche-detail .perso img {
+  background: black;
+  display: flex;
+}
+
 .fiche-detail .perso .content {
   min-width: 200px;
   background: white;
@@ -67,4 +145,11 @@
 }
 .fiche-detail .perso .content .description {
   padding: 15px 5px;
+}
+.fiche-detail .comics {
+  padding-top: 30px;
+}
+.fiche-detail .qrcode {
+  width: 50px;
+  padding-left: 40px;
 }

@@ -3,7 +3,13 @@ import { useLocation } from "react-router-dom";
 import axios from "axios";
 // import Card from "../Card";
 import LisCard from "../../ListCard";
+import shieldLogo from "../../../assets/images/shield/SHIE.jpg";
+import codebarre from "../../../assets/images/barcode.gif";
+import qrcode from "../../../assets/images/qrcode.png";
 import "./detail.css";
+
+const classified =
+  "Article nor prepare ███████ ███ ███ ████ ███ ██████ ███ ██████ ███ ██████ ██████ ██████ ████ ███ █████████ █████████ ███ attempted estimable █████ █████ █████ █████ █████ ██ ██ ██ ██████ ████████ ███ ███ Felicity now law ████████ ████ ██████ ██████ ███ ██████ ███ ████";
 
 const Detail = () => {
   const location = useLocation();
@@ -37,41 +43,57 @@ const Detail = () => {
         <>
           <div className="header">
             <div className="top-pane">
-              <div>
+              <div className="civility">
                 <div className="name">
-                  Name: <p>{perso.name}</p>
+                  <span className="label">Name</span>: <p>{perso.name}</p>
                 </div>
-                <div className="status">Status: ACTIVE</div>
+                <div className="status">
+                  <span className="label">Status</span>: <p>ACTIVE</p>
+                </div>
               </div>
-              <div>SHIELD logo</div>
-              <div>
-                <p>investigation unit</p>
-                <p>classified: eyes only</p>
-                <p>do not duplicate</p>
-                <p>office of the director</p>
+              <div className="logo">
+                <img src={shieldLogo} alt="alt" />
+              </div>
+              <div className="left-side">
+                <p className="investigation">investigation unit</p>
+                <p className="type">
+                  <span className="label">classified:</span>{" "}
+                  <span className="red">eyes only</span>
+                </p>
+                <p className="consign">do not duplicate</p>
+                <p className="consign">office of the director</p>
               </div>
             </div>
             <div className="middle-pane">
-              <div>Restricted access: LEVEL 7</div>
+              <span className="label">Restricted access</span>:{" "}
+              <span
+                className="red
+              "
+              >
+                LEVEL 7
+              </span>
             </div>
             <div className="bottom-pane">
-              <div>SHIELD PRSONNNEL FILE</div>
-              <div>CODE BARRE</div>
+              <div>S.H.I.E.L.D PeRSONNNEL FILE</div>
+              <div className="codebarre">
+                <img src={codebarre} alt="code barre" />
+              </div>
             </div>
           </div>
           <div className="content-container">
             <div className="content">
               <div className="description">
-                {perso.desciption
-                  ? perso.desciption
-                  : "Le SHIELD n'a pas transmis les informations"}
+                {perso.desciption ? perso.desciption : classified}
               </div>
               <div className="image">
                 <img src={perso.image} alt="Some alt" />
               </div>
             </div>
-            <div className="commics">
+            <div className="comics">
               <LisCard data={comics} />
+            </div>
+            <div>
+              <img src={qrcode} alt="qrcode" className="qrcode" />
             </div>
           </div>
         </>
