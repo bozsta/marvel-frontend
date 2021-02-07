@@ -1,3 +1,51 @@
+.fiche-detail {
+  background-color: #fff;
+  padding: 15px;
+}
+.fiche-detail .header {
+  color: white;
+}
+.fiche-detail .header .top-pane {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 20px 0px 5px;
+  background-color: black;
+}
+.fiche-detail .header .top-pane .name {
+  display: flex;
+  border-bottom: 1px solid white;
+}
+.fiche-detail .header .top-pane .status {
+  border-bottom: 1px solid white;
+}
+.fiche-detail .header .middle-pane {
+  background-color: black;
+  padding: 0 5px 5px 5px;
+}
+.fiche-detail .header .bottom-pane {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.fiche-detail .header .bottom-pane > div {
+  background-color: black;
+  padding: 5px;
+}
+.fiche-detail .header .bottom-pane > div:first-child {
+  flex-grow: 1;
+  margin-right: 5px;
+}
+.fiche-detail .content-container {
+  padding: 20px 0;
+}
+.fiche-detail .content-container .content {
+  display: flex;
+  justify-content: space-between;
+}
+.fiche-detail .content-container .content .image {
+  border: 5px solid black;
+}
+
 .fiche-detail .perso {
   display: flex;
   justify-content: center;

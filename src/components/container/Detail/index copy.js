@@ -35,45 +35,18 @@ const Detail = () => {
     <div className="fiche-detail">
       {!isLoading && (
         <>
-          <div className="header">
-            <div className="top-pane">
-              <div>
-                <div className="name">
-                  Name: <p>{perso.name}</p>
-                </div>
-                <div className="status">Status: ACTIVE</div>
-              </div>
-              <div>SHIELD logo</div>
-              <div>
-                <p>investigation unit</p>
-                <p>classified: eyes only</p>
-                <p>do not duplicate</p>
-                <p>office of the director</p>
-              </div>
-            </div>
-            <div className="middle-pane">
-              <div>Restricted access: LEVEL 7</div>
-            </div>
-            <div className="bottom-pane">
-              <div>SHIELD PRSONNNEL FILE</div>
-              <div>CODE BARRE</div>
-            </div>
-          </div>
-          <div className="content-container">
+          <div className="perso">
+            <img src={perso.image} alt="Some alt" />
             <div className="content">
-              <div className="description">
+              <p className="name">{perso.name}</p>
+              <p className="description">
                 {perso.desciption
                   ? perso.desciption
                   : "Le SHIELD n'a pas transmis les informations"}
-              </div>
-              <div className="image">
-                <img src={perso.image} alt="Some alt" />
-              </div>
-            </div>
-            <div className="commics">
-              <LisCard data={comics} />
+              </p>
             </div>
           </div>
+          <LisCard data={comics} />
         </>
       )}
     </div>
