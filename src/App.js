@@ -13,13 +13,12 @@ import Comics from "./components/container/Comics";
 import Favoris from "./components/container/Favoris";
 import Detail from "./components/container/Detail/";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faStar } from "@fortawesome/free-solid-svg-icons";
-library.add(faStar);
+import { faStar, faTimes } from "@fortawesome/free-solid-svg-icons";
+library.add(faStar, faTimes);
 
 function App() {
   const [search, setSearch] = useState("");
-  const handleSearch = (e) => {
-    const { value } = e.target;
+  const handleSearch = (value) => {
     setSearch(value);
   };
 
@@ -27,7 +26,7 @@ function App() {
     <div className="App">
       <div className="container">
         <Router>
-          <Header searchVal={search} handleSearch={handleSearch} />
+          <Header search={search} handleSearch={handleSearch} />
           <Switch>
             <Route path="/personnages">
               <Personnages search={search} />

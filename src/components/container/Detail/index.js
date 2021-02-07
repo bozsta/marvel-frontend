@@ -17,7 +17,6 @@ const Detail = () => {
         const response = await axios.get(
           `${process.env.REACT_APP_API_URL}/comics/char/${id}`
         );
-        console.log("response", response.data);
         const perso = {};
         perso.image = `${response.data.thumbnail.path}/portrait_xlarge.jpg`;
         perso.name = response.data.name;

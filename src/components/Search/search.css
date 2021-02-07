@@ -1,0 +1,10 @@
+.search {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.search svg {
+  position: absolute;
+  right: 6px;
+  color: red;
+}

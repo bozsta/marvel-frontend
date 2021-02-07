@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import qs from "qs";
 import ListCard from "../ListCard";
 import Pagination from "../Pagination/";
 import Spinner from "../Spinner/";
@@ -16,8 +17,14 @@ const Personnages = ({ search }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
+        const params = {
+          limit,
+          page,
+          name: search,
+        };
+        const queryParams = qs.stringify(params);
         const response = await axios.get(
-          `${process.env.REACT_APP_API_URL}/characteres/all?limit=${limit}&page=${page}&name=${search}`
+          `${process.env.REACT_APP_API_URL}/characteres/all?${queryParams}`
         );
         setData(response.data.results);
         setLimit(response.data.limit);
@@ -64,7 +71,7 @@ const Personnages = ({ search }) => {
           favoris={favoris}
         />
       )}
-      {!isLoading && (
+      {!isLoading && data.length > 0 && (
         <Pagination
           max={limit}
           setMax={handleSetMax}

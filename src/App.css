@@ -42,7 +42,7 @@ header nav ul li a {
   padding: 19px;
 }
 header nav ul li a:hover {
-  color: #c60404;
+  color: #35b535;
 }
 .container {
   max-width: 1200px;
@@ -51,6 +51,12 @@ header nav ul li a:hover {
 .search {
   display: flex;
   align-items: center;
+  position: relative;
+}
+.search svg {
+  position: absolute;
+  right: 6px;
+  color: red;
 }
 .list {
   display: flex;

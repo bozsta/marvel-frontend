@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Logo from "../assets/images/marvel-logo.png";
 import Menu from "./Menu";
-import Search from "./Search";
+import Search from "./Search/";
 const Header = ({ search, handleSearch }) => {
   return (
     <header>

@@ -22,10 +22,10 @@
 }
 .card.flip-card .flip-card-front .title {
   opacity: 1;
+  transition: 0.8s;
 }
 .card.flip-card:hover .flip-card-front .title {
   opacity: 0;
-  transition: 0.8s;
 }
 .card .flip-card-front,
 .card .flip-card-back {
@@ -44,7 +44,7 @@
   height: 100%;
 }
 .card .flip-card-back {
-  background-color: dodgerblue;
+  background-color: #266ef6;
   color: white;
   transform: rotateY(180deg);
 }
