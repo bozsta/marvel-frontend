@@ -147,7 +147,7 @@
   padding: 15px 5px;
 }
 .fiche-detail .comics {
-  padding-top: 30px;
+  padding: 30px 0 15px 0;
 }
 .fiche-detail .qrcode {
   width: 50px;

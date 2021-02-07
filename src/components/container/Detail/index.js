@@ -23,11 +23,13 @@ const Detail = () => {
         const response = await axios.get(
           `${process.env.REACT_APP_API_URL}/comics/char/${id}`
         );
-        const perso = {};
-        perso.image = `${response.data.thumbnail.path}/portrait_xlarge.jpg`;
-        perso.name = response.data.name;
-        perso.description = response.data.description;
-        setPerso(perso);
+        const char = {};
+        char.image = `${response.data.thumbnail.path}/portrait_xlarge.jpg`;
+        console.log("response.data", response.data);
+        char.name = response.data.name;
+        char.description = response.data.description;
+        console.log("char", char);
+        setPerso(char);
         setCommics(response.data.comics);
         setIsloading(false);
       } catch (error) {
@@ -83,7 +85,7 @@ const Detail = () => {
           <div className="content-container">
             <div className="content">
               <div className="description">
-                {perso.desciption ? perso.desciption : classified}
+                {perso.description ? perso.description : classified}
               </div>
               <div className="image">
                 <img src={perso.image} alt="Some alt" />
