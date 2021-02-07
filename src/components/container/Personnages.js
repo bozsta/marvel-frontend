@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import ListCard from "../ListCard";
-import Pagination from "../Pagination";
-import Spinner from "../Spinner";
+import Pagination from "../Pagination/";
+import Spinner from "../Spinner/";
 
 const Personnages = ({ search }) => {
   const [isLoading, setIsloading] = useState(true);
@@ -19,7 +19,6 @@ const Personnages = ({ search }) => {
         const response = await axios.get(
           `${process.env.REACT_APP_API_URL}/characteres/all?limit=${limit}&page=${page}&name=${search}`
         );
-        console.log("response", response.data);
         setData(response.data.results);
         setLimit(response.data.limit);
         setPageMax(Math.ceil(response.data.count / response.data.limit));

@@ -1,0 +1,22 @@
+.fiche-detail .perso {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+.fiche-detail .perso img {
+  border: 3px solid #fff;
+}
+.fiche-detail .perso .content {
+  min-width: 200px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 5px;
+}
+.fiche-detail .perso .content .name {
+  padding: 15px 5px;
+}
+.fiche-detail .perso .content .description {
+  padding: 15px 5px;
+}

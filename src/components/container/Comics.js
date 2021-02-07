@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import ListCard from "../ListCard";
-import Pagination from "../Pagination";
-import Spinner from "../Spinner";
+import Pagination from "../Pagination/";
+import Spinner from "../Spinner/";
 
 const Comics = ({ search }) => {
   const [isLoading, setIsloading] = useState(true);

@@ -1,5 +1,7 @@
 import { useHistory } from "react-router-dom";
-import BtnFavoris from "./BtnFavoris";
+import BtnFavoris from "../BtnFavoris";
+import Classified from "../Classified/";
+import "./card.css";
 
 const Card = ({
   item,
@@ -19,7 +21,10 @@ const Card = ({
     handleFavorisClick(id, e);
   };
   return (
-    <div className="card flip-card" onClick={handleClick}>
+    <div
+      className={`card flip-card ${item.description ? "" : "classified"}`}
+      onClick={handleClick}
+    >
       <div className="flip-card-inner">
         <div className="flip-card-front">
           <BtnFavoris
@@ -45,7 +50,7 @@ const Card = ({
             isFavoris={isFavoris}
           />
           <div className="content">
-            <p>{item.description}</p>
+            {item.description ? <p>{item.description} </p> : <Classified />}
           </div>
         </div>
       </div>

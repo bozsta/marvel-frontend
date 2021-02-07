@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import ListCard from "../ListCard.js";
-import Spinner from "../Spinner";
+import Spinner from "../Spinner/";
 
 const Favoris = () => {
   const [isLoading, setIsloading] = useState(true);
@@ -18,7 +18,6 @@ const Favoris = () => {
           `${process.env.REACT_APP_API_URL}/characteres/favoris`,
           { favorisId: favoris }
         );
-        console.log("data", response.data);
         setData(response.data);
         setIsloading(false);
       } catch (error) {

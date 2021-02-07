@@ -1,0 +1,89 @@
+.card.classified .flip-card-back {
+  background: white;
+}
+.card.flip-card {
+  background-color: transparent;
+  width: 204px;
+  height: 225px;
+  width: 272px;
+  height: 365px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+.card .flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.card.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.card.flip-card .flip-card-front .title {
+  opacity: 1;
+}
+.card.flip-card:hover .flip-card-front .title {
+  opacity: 0;
+  transition: 0.8s;
+}
+.card .flip-card-front,
+.card .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  border: 1px solid #f1f1f1;
+}
+.card .flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+.card .flip-card-front .image {
+  height: 100%;
+}
+.card .flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
+.card .flip-card-back .content {
+  margin: 0 auto;
+  padding: 15px;
+}
+.btn-favoris {
+  color: white;
+  position: absolute;
+  font-size: 20px;
+  background: #c60404;
+  height: 35px;
+  width: 35px;
+  padding: 5px;
+}
+.card .flip-card-back {
+  display: flex;
+  align-items: center;
+}
+.card .flip-card-front .btn-favoris {
+  left: 0px;
+  top: 0px;
+  border-radius: 0 0 96% 0;
+}
+.card .flip-card-back .btn-favoris {
+  right: 0px;
+  top: 0px;
+  border-radius: 0 0 0 96%;
+}
+.card .btn-favoris svg {
+  position: relative;
+}
+.card .flip-card-front .btn-favoris svg {
+  right: 5px;
+}
+.card .flip-card-back .btn-favoris svg {
+  left: 5px;
+}
+.card .btn-favoris.added {
+  color: #ffd300;
+}

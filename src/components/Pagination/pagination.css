@@ -1,0 +1,30 @@
+.pagination {
+  background: #ff8b00;
+  color: white;
+  display: flex;
+  padding: 15px;
+  justify-content: center;
+}
+.pagination .navigation {
+  display: flex;
+  margin-right: 50px;
+  align-items: center;
+}
+.pagination .navigation > div {
+  padding: 0 15px;
+}
+.pagination .navigation button {
+  border: 1px solid #fff;
+  padding: 5px;
+  border-radius: 3px;
+}
+.pagination .navigation button:hover {
+  border: 1px solid #fff;
+  padding: 5px;
+  background-color: #ff8b00;
+  color: #fff;
+}
+.pagination .itemPerPage {
+  display: flex;
+  align-items: center;
+}
