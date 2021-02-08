@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import ListCard from "../ListCard.js";
+import ListCard from "../ListCard/";
 import Spinner from "../Spinner/";
 
 const Favoris = () => {

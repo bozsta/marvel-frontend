@@ -1,0 +1,21 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.list .card {
+  display: flex;
+}
+.list .card img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.list .card .title {
+  position: absolute;
+  bottom: 0;
+  background: #bf00ff;
+  color: white;
+  width: 100%;
+  padding: 5px 0;
+}

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
 // import Card from "../Card";
-import LisCard from "../../ListCard";
+import LisCard from "../../ListCard/";
 import shieldLogo from "../../../assets/images/shield/SHIE.jpg";
 import codebarre from "../../../assets/images/barcode1.gif";
 import qrcode from "../../../assets/images/qrcode.png";

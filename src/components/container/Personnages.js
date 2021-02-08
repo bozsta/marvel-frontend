@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import qs from "qs";
-import ListCard from "../ListCard";
+import ListCard from "../ListCard/";
 import Pagination from "../Pagination/";
 import Spinner from "../Spinner/";
 

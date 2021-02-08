@@ -7,7 +7,7 @@ import {
   Redirect,
 } from "react-router-dom";
 import { useState } from "react";
-import Header from "./components/Header";
+import Header from "./components/Header/";
 import Personnages from "./components/container/Personnages";
 import Comics from "./components/container/Comics";
 import Favoris from "./components/container/Favoris";

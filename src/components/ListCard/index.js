@@ -1,4 +1,5 @@
-import Card from "./Card/";
+import Card from "../Card/index";
+import './ListCard.css'
 
 const ListCard = ({
   data,
