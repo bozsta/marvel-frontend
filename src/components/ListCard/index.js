@@ -6,7 +6,7 @@ const ListCard = ({
   isChar,
   handleFavorisClick,
   favorisEnable,
-  favoris,
+  favoris
 }) => {
   return (
     <div className="list">
