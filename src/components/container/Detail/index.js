@@ -20,9 +20,6 @@ const classified = () => {
   )
 }
 
-// const classified =
-//   "Article nor prepare ███████ ███ ███ ████ ███ ██████ ███ ██████ ███ ██████ ██████ ██████ ████ ███ █████████ █████████ ███ attempted estimable █████ █████ █████ █████ █████ ██ ██ ██ ██████ ████████ ███ ███ Felicity now law ████████ ████ ██████ ██████ ███ ██████ ███ ████";
-
 const Detail = () => {
   const location = useLocation();
   const { id } = location.state;
@@ -37,15 +34,13 @@ const Detail = () => {
         );
         const char = {};
         char.image = `${response.data.thumbnail.path}/portrait_xlarge.jpg`;
-        console.log("response.data", response.data);
         char.name = response.data.name;
         char.description = response.data.description;
-        console.log("char", char);
         setPerso(char);
         setCommics(response.data.comics);
         setIsloading(false);
       } catch (error) {
-        console.log("Error Retail", error);
+        console.log("[DETAIL] Error", error);
       }
     };
     fetchData();
