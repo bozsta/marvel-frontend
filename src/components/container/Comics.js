@@ -36,6 +36,7 @@ const Comics = ({ search }) => {
   const handleSetMax = (e) => {
     const { value } = e.target;
     setLimit(value);
+    setPage(1)
   };
 
   return (

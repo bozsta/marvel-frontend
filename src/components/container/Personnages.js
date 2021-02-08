@@ -40,6 +40,7 @@ const Personnages = ({ search }) => {
   const handleSetMax = (e) => {
     const { value } = e.target;
     setLimit(value);
+    setPage(1)
   };
   const handleFavorisClick = (id, e) => {
     e.stopPropagation();
