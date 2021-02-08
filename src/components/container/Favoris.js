@@ -52,6 +52,7 @@ const Favoris = () => {
           handleFavorisClick={handleFavorisClick}
           favorisEnable="true"
           favoris={favoris}
+          isChar="true"
         />
       )}
     </>
