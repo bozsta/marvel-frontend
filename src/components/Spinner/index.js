@@ -1,5 +1,5 @@
 // import spinner from "../assets/images/loader/spinner.ico";
-import spinner from "../../assets/images/loader/shield.jpeg";
+import spinner from "../../assets/images/loader/shield.png";
 import "./spinner.css";
 const Spinner = () => {
   return (

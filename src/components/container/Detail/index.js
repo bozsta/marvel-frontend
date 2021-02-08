@@ -4,12 +4,24 @@ import axios from "axios";
 // import Card from "../Card";
 import LisCard from "../../ListCard";
 import shieldLogo from "../../../assets/images/shield/SHIE.jpg";
-import codebarre from "../../../assets/images/barcode.gif";
+import codebarre from "../../../assets/images/barcode1.gif";
 import qrcode from "../../../assets/images/qrcode.png";
+import stamp from "../../../assets/images/shield/image_classified.png"
 import "./detail.css";
 
-const classified =
-  "Article nor prepare ███████ ███ ███ ████ ███ ██████ ███ ██████ ███ ██████ ██████ ██████ ████ ███ █████████ █████████ ███ attempted estimable █████ █████ █████ █████ █████ ██ ██ ██ ██████ ████████ ███ ███ Felicity now law ████████ ████ ██████ ██████ ███ ██████ ███ ████";
+const classified = () => {
+  return (
+    <div className="classified">
+      <p>
+        Article nor prepare ███████ ███ ███ ████ ███ ██████ ███ ██████ ███ ██████ ██████ ██████ ████ ███ █████████ █████████ ███ attempted estimable █████ █████ █████ █████ █████ ██ ██ ██ ██████ ████████ ███ ███ Felicity now law ████████ ████ ██████ ██████ ███ ██████ ███ ████
+      </p>
+      <img src={stamp} alt="top secret" />
+    </div>
+  )
+}
+
+// const classified =
+//   "Article nor prepare ███████ ███ ███ ████ ███ ██████ ███ ██████ ███ ██████ ██████ ██████ ████ ███ █████████ █████████ ███ attempted estimable █████ █████ █████ █████ █████ ██ ██ ██ ██████ ████████ ███ ███ Felicity now law ████████ ████ ██████ ██████ ███ ██████ ███ ████";
 
 const Detail = () => {
   const location = useLocation();
@@ -85,7 +97,7 @@ const Detail = () => {
           <div className="content-container">
             <div className="content">
               <div className="description">
-                {perso.description ? perso.description : classified}
+                {perso.description ? perso.description : classified()}
               </div>
               <div className="image">
                 <img src={perso.image} alt="Some alt" />

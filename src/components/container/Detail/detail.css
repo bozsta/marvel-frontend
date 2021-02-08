@@ -79,9 +79,14 @@
 .fiche-detail .header .bottom-pane > div:first-child {
   flex-grow: 2;
   margin-right: 5px;
+  display: flex;
+  align-items: center;
 }
 .fiche-detail .header .bottom-pane > div.codebarre {
   flex-grow: 1;
+  height: 25px;
+  display: flex;
+  justify-content: center;
 }
 .fiche-detail .header .investigation {
   font-size: 30px;
@@ -98,6 +103,8 @@
 }
 .fiche-detail .content-container {
   padding: 30px 0;
+  background: url('../../../assets/images/shield/s-h-i-e-l-d-logo-F89847BD30-seeklogo.com.png') no-repeat 50% 130px;
+  background-size: 70%;
 }
 .fiche-detail .content-container .content {
   display: flex;
@@ -152,4 +159,13 @@
 .fiche-detail .qrcode {
   width: 50px;
   padding-left: 40px;
+}
+
+.fiche-detail .classified {
+  position: relative;
+}
+.fiche-detail .classified img {
+  position: absolute;
+  top: 0;
+  right: 39px;
 }
