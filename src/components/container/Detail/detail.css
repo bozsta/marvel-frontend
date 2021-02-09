@@ -164,7 +164,7 @@
 .fiche-detail .classified {
   position: relative;
 }
-.fiche-detail .classified img {
+.fiche-detail .description .classified img {
   position: absolute;
   top: 0;
   right: 39px;
